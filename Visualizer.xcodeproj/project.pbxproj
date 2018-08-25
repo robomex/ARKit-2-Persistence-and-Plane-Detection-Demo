@@ -15,6 +15,7 @@
 		DE58431C2131E37400473CA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE58431A2131E37400473CA7 /* LaunchScreen.storyboard */; };
 		DE5843252131E60C00473CA7 /* ViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5843242131E60C00473CA7 /* ViewController+ARSCNViewDelegate.swift */; };
 		DE5843272131FB8B00473CA7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5843262131FB8B00473CA7 /* Constants.swift */; };
+		DE5843292131FD5200473CA7 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5843282131FD5100473CA7 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		DE58431D2131E37400473CA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE5843242131E60C00473CA7 /* ViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
 		DE5843262131FB8B00473CA7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DE5843282131FD5100473CA7 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				DE5843132131E36E00473CA7 /* ViewController.swift */,
 				DE5843242131E60C00473CA7 /* ViewController+ARSCNViewDelegate.swift */,
 				DE5843262131FB8B00473CA7 /* Constants.swift */,
+				DE5843282131FD5100473CA7 /* Utilities.swift */,
 				DE5843152131E36E00473CA7 /* Main.storyboard */,
 				DE5843182131E37400473CA7 /* Assets.xcassets */,
 				DE58431A2131E37400473CA7 /* LaunchScreen.storyboard */,
@@ -148,6 +151,7 @@
 				DE5843252131E60C00473CA7 /* ViewController+ARSCNViewDelegate.swift in Sources */,
 				DE5843142131E36E00473CA7 /* ViewController.swift in Sources */,
 				DE5843102131E36C00473CA7 /* AppDelegate.swift in Sources */,
+				DE5843292131FD5200473CA7 /* Utilities.swift in Sources */,
 				DE5843272131FB8B00473CA7 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

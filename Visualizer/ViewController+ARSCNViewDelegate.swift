@@ -25,7 +25,7 @@ extension ViewController: ARSCNViewDelegate {
         let height = CGFloat(planeAnchor.extent.z)
         let plane = SCNPlane(width: width, height: height)
         let occlusionPlane = SCNPlane(width: width, height: height)
-        plane.firstMaterial?.diffuse.contents = UIColor.blue.withAlphaComponent(0.5)
+        plane.firstMaterial?.diffuse.contents = UIColor.random(withAlpha: 0.5)
         occlusionPlane.firstMaterial?.colorBufferWriteMask = []
         
         let planeNode = SCNNode(geometry: plane)
