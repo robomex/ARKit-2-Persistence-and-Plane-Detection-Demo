@@ -24,33 +24,45 @@ extension ViewController: ARSCNViewDelegate {
         let width = CGFloat(planeAnchor.extent.x)
         let height = CGFloat(planeAnchor.extent.z)
         let plane = SCNPlane(width: width, height: height)
+        let occlusionPlane = SCNPlane(width: width, height: height)
         plane.firstMaterial?.diffuse.contents = UIColor.blue.withAlphaComponent(0.5)
-        let planeNode = SCNNode(geometry: plane)
+        occlusionPlane.firstMaterial?.colorBufferWriteMask = []
         
-        let x = CGFloat(planeAnchor.center.x)
-        let y = CGFloat(planeAnchor.center.y)
-        let z = CGFloat(planeAnchor.center.z)
-        planeNode.position = SCNVector3(x, y, z)
+        let planeNode = SCNNode(geometry: plane)
+        let occlusionNode = SCNNode(geometry: occlusionPlane)
+        
+        planeNode.position = SCNVector3(planeAnchor.center.x, planeAnchor.center.y, planeAnchor.center.z)
         planeNode.eulerAngles.x = -.pi / 2
         
+        occlusionNode.position = planeNode.position
+        occlusionNode.eulerAngles = planeNode.eulerAngles
+        occlusionNode.position.y -= 0.01
+        occlusionNode.renderingOrder = -1
+        
         node.addChildNode(planeNode)
+        node.addChildNode(occlusionNode)
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         guard let planeAnchor = anchor as? ARPlaneAnchor,
             let planeNode = node.childNodes.first,
-            let plane = planeNode.geometry as? SCNPlane
+            let plane = planeNode.geometry as? SCNPlane,
+            let occlusionNode = node.childNodes.last,
+            let occlusionPlane = occlusionNode.geometry as? SCNPlane
             else { return }
         
         let width = CGFloat(planeAnchor.extent.x)
         let height = CGFloat(planeAnchor.extent.z)
         plane.width = width
         plane.height = height
+        occlusionPlane.width = width
+        occlusionPlane.height = height
         
         let x = CGFloat(planeAnchor.center.x)
         let y = CGFloat(planeAnchor.center.y)
         let z = CGFloat(planeAnchor.center.z)
         planeNode.position = SCNVector3(x, y, z)
+        occlusionNode.position = SCNVector3(x, y - 0.01, z)
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
