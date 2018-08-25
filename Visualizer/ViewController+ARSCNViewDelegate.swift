@@ -36,7 +36,7 @@ extension ViewController: ARSCNViewDelegate {
         
         occlusionNode.position = planeNode.position
         occlusionNode.eulerAngles = planeNode.eulerAngles
-        occlusionNode.position.y -= 0.01
+        occlusionNode.position.y += Constants.occlusionPlaneVerticalOffset
         occlusionNode.renderingOrder = -1
         
         node.addChildNode(planeNode)
@@ -62,7 +62,7 @@ extension ViewController: ARSCNViewDelegate {
         let y = CGFloat(planeAnchor.center.y)
         let z = CGFloat(planeAnchor.center.z)
         planeNode.position = SCNVector3(x, y, z)
-        occlusionNode.position = SCNVector3(x, y - 0.01, z)
+        occlusionNode.position = SCNVector3(x, y + CGFloat(Constants.occlusionPlaneVerticalOffset), z)
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
