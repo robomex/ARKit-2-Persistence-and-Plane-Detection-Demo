@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE0FF1652144656300303A3C /* ViewController+WorldMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0FF1642144656300303A3C /* ViewController+WorldMap.swift */; };
 		DE5843102131E36C00473CA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58430F2131E36C00473CA7 /* AppDelegate.swift */; };
 		DE5843122131E36D00473CA7 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = DE5843112131E36D00473CA7 /* art.scnassets */; };
 		DE5843142131E36E00473CA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5843132131E36E00473CA7 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE0FF1642144656300303A3C /* ViewController+WorldMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+WorldMap.swift"; sourceTree = "<group>"; };
 		DE58430C2131E36900473CA7 /* Visualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Visualizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE58430F2131E36C00473CA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE5843112131E36D00473CA7 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				DE58430F2131E36C00473CA7 /* AppDelegate.swift */,
 				DE5843112131E36D00473CA7 /* art.scnassets */,
 				DE5843132131E36E00473CA7 /* ViewController.swift */,
+				DE0FF1642144656300303A3C /* ViewController+WorldMap.swift */,
 				DE5843242131E60C00473CA7 /* ViewController+ARSCNViewDelegate.swift */,
 				DE5843262131FB8B00473CA7 /* Constants.swift */,
 				DE5843282131FD5100473CA7 /* Utilities.swift */,
@@ -152,6 +155,7 @@
 				DE5843142131E36E00473CA7 /* ViewController.swift in Sources */,
 				DE5843102131E36C00473CA7 /* AppDelegate.swift in Sources */,
 				DE5843292131FD5200473CA7 /* Utilities.swift in Sources */,
+				DE0FF1652144656300303A3C /* ViewController+WorldMap.swift in Sources */,
 				DE5843272131FB8B00473CA7 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
