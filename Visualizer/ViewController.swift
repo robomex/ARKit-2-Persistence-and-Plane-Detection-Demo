@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         sceneView.delegate = self
-        sceneView.showsStatistics = true
+//        sceneView.showsStatistics = true
         sceneView.autoenablesDefaultLighting = true
         sceneView.automaticallyUpdatesLighting = true
         
